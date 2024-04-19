@@ -374,5 +374,9 @@ const bills = [
 ];
 
 // Start coding here
+function filMember(a){
+  return a.member != null ;
+}
 
-const newBills;
+const newBills = bills.filter(filMember);
+console.log(newBills);

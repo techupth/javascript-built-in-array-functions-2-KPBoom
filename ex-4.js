@@ -374,4 +374,21 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+function filMember(a){
+  return a.member != null ;
+}
+function filName(b){
+  return b.member.name ;
+}
+
+let member = bills.filter(filMember);
+const billMembers = member.map(filName);
+let n = [] ;
+for (let i=0;i<billMembers.length;i++){
+  if (n.indexOf(billMembers[i]) < 0 ){
+    n.push(billMembers[i]);
+  }
+}
+
+const totalMembers = n.length;
+console.log("Unique Members Count: "+totalMembers);
